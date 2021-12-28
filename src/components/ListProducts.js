@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Product } from "./Product";
 
-export const ListComponents = () => {
+export const ListProducts = () => {
   const products = json.products;
   return (
     <Box sx={{ flexGrow: 1 }} m={"150px"}>
