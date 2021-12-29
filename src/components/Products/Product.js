@@ -3,10 +3,21 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
+import db from "../../app/db/db";
 
 export const Product = ({ item }) => {
   const { title, price, image } = item;
+
+  const addProductToCart = ({ title, price, category }) => {
+    db.cart.add({
+      title: title,
+      price: price,
+      category: category,
+    });
+  };
+
   return (
     <Grid item xs={4}>
       <Card sx={{ maxWidth: "80%" }}>
@@ -23,6 +34,9 @@ export const Product = ({ item }) => {
           <Typography gutterBottom variant="h5" component="div">
             ${price}
           </Typography>
+          <Button onClick={() => addProductToCart(item)}>
+            Añadir al carrito
+          </Button>
         </CardContent>
       </Card>
     </Grid>

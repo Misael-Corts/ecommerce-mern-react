@@ -1,4 +1,4 @@
-import json from "../examples/products.json";
+import json from "../../examples/products.json";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Product } from "./Product";
