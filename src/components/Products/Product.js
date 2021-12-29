@@ -4,7 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { CardActions } from "@mui/material";
 import { Grid } from "@mui/material";
+
 import db from "../../app/db/db";
 
 export const Product = ({ item }) => {
@@ -31,13 +33,17 @@ export const Product = ({ item }) => {
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
+        </CardContent>
+
+        <CardActions style={{ justifyContent: "space-between" }}>
           <Typography gutterBottom variant="h5" component="div">
             ${price}
           </Typography>
-          <Button onClick={() => addProductToCart(item)}>
+
+          <Button onClick={() => addProductToCart(item)} variant="contained">
             Añadir al carrito
           </Button>
-        </CardContent>
+        </CardActions>
       </Card>
     </Grid>
   );

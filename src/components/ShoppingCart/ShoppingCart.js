@@ -7,7 +7,7 @@ import { ShoppingCartItem } from "./ShoppingCartItem";
 import db from "../../app/db/db";
 import { useLiveQuery } from "dexie-react-hooks";
 import { useState } from "react";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 
 const StyledMenu = styled(props => (
   <Menu
@@ -113,7 +113,10 @@ export const ShoppingCart = () => {
             item={product}
           />
         ))}
-        <Typography pl={"16px"}>Total: {totalPrice} </Typography>
+        <Divider />
+        <Typography pl={"16px"} variant="button" fontSize={"16px"}>
+          Total: {totalPrice}{" "}
+        </Typography>
       </StyledMenu>
     </div>
   );
