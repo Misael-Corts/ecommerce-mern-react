@@ -8,6 +8,7 @@ import db from "../../app/db/db";
 import { useLiveQuery } from "dexie-react-hooks";
 import { useState } from "react";
 import { Divider, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const StyledMenu = styled(props => (
   <Menu
@@ -114,9 +115,11 @@ export const ShoppingCart = () => {
           />
         ))}
         <Divider />
-        <Typography pl={"16px"} variant="button" fontSize={"16px"}>
-          Total: {totalPrice}{" "}
-        </Typography>
+        <Link to="/purchase">
+          <Typography pl={"16px"} variant="button" fontSize={"16px"}>
+            Total: ${totalPrice}{" "}
+          </Typography>
+        </Link>
       </StyledMenu>
     </div>
   );

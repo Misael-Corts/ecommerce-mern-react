@@ -13,6 +13,7 @@ export const HeaderApp = () => {
       <AppBar position="static">
         <Toolbar>
           <IconButton
+            href="/"
             size="large"
             edge="start"
             color="inherit"
