@@ -115,7 +115,7 @@ export const ShoppingCart = () => {
           />
         ))}
         <Divider />
-        <Link to="/purchase">
+        <Link to="/purchase" style={{ textDecoration: "none", color: "black" }}>
           <Typography pl={"16px"} variant="button" fontSize={"16px"}>
             Total: ${totalPrice}{" "}
           </Typography>

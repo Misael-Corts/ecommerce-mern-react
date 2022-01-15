@@ -10,7 +10,7 @@ import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
 export const HeaderApp = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             href="/"
